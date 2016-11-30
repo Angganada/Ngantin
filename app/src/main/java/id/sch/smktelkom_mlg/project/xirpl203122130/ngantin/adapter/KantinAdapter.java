@@ -33,7 +33,6 @@ public class KantinAdapter extends RecyclerView.Adapter<KantinAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         Kantin kantin = kantinList.get(position);
         holder.tvJudul.setText(kantin.judul);
-        holder.tvDeskripsi.setText(kantin.deskripsi);
         holder.ivFoto.setImageDrawable(kantin.foto);
     }
 
@@ -47,13 +46,11 @@ public class KantinAdapter extends RecyclerView.Adapter<KantinAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivFoto;
         TextView tvJudul;
-        TextView tvDeskripsi;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
             tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
-            tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
         }
     }
 }
